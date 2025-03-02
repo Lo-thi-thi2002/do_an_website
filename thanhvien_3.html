@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trưởng phòng maketting</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: greenyellow;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/nhat_1.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Nguyễn Anh Nhật <br>
+    Sinh ngày:11/02/1995<br>
+    Quê quán : Vĩnh Long <br>
+    Nơi công tác: Công ty TNHH NTKN <br>
+    Chức vụ: Manager Equipment <br>
+    </p>
+    <p> 
+        Tôi là một người luôn tìm kiếm sự hoàn hảo trong hệ thống máy móc và thiết bị. Đối với tôi, mỗi cỗ máy không chỉ đơn thuần là những bánh răng, động cơ hay mạch điện, mà còn là trái tim của một dây chuyền sản xuất. Đảm nhận vai trò **Manager Equipment**, tôi hiểu rằng nhiệm vụ của mình không chỉ dừng lại ở việc bảo trì, sửa chữa, mà còn là tối ưu hóa, cải tiến và đảm bảo thiết bị luôn vận hành ở trạng thái tốt nhất.  
+
+        Niềm đam mê với công nghệ và kỹ thuật đã thôi thúc tôi không ngừng học hỏi, nghiên cứu những giải pháp mới nhằm nâng cao hiệu suất, kéo dài tuổi thọ máy móc và giảm thiểu tối đa rủi ro trong sản xuất. Mỗi lần khắc phục thành công một sự cố, tối ưu hóa một quy trình hay nâng cấp một hệ thống, tôi không chỉ cảm thấy tự hào mà còn thấy rõ giá trị mà mình mang lại cho doanh nghiệp.  
+        
+        Là một người theo đuổi sự chính xác và hiệu quả, tôi luôn đặt ra tiêu chuẩn cao trong công việc, từ việc phân tích dữ liệu vận hành, lập kế hoạch bảo trì đến đào tạo đội ngũ kỹ thuật. Tôi tin rằng, một hệ thống thiết bị hoạt động ổn định không chỉ giúp doanh nghiệp tiết kiệm chi phí mà còn nâng cao năng suất và chất lượng sản phẩm.  
+        
+        Hơn ai hết, tôi hiểu rằng **máy móc có thể hiện đại, nhưng con người mới là yếu tố quyết định**. Vì vậy, tôi luôn chú trọng vào việc xây dựng đội ngũ kỹ thuật chuyên nghiệp, đoàn kết và không ngừng phát triển. Với tôi, **thành công không chỉ là vận hành thiết bị tốt, mà còn là tạo ra một môi trường làm việc an toàn, hiệu quả và bền vững**.  
+        
+        ⚙ **Tôi là Manager Equipment – Người đồng hành cùng máy móc, tối ưu hiệu suất, kiến tạo giá trị!** 🚀  
+    </p>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/nhat_1.jpg",
+            "hinh_anh/thanhvien/nhat_2.jpg",
+            "hinh_anh/thanhvien/nhat_3.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+    </script>
+</body>
+</html>

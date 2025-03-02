@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Đăng Nhập/Đăng Ký</title>
+<link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container" id="form-container">
+        <button id="closeBtn">X</button>
+        <h2>Đăng nhập</h2>
+        <input type="text" id="login-username" placeholder="Tên người dùng hoặc email">
+        <input type="password" id="login-password" placeholder="Mật khẩu">
+        <button onclick="login()">Đăng nhập</button>
+        <a href="javascript:showSignup()">Chưa có tài khoản? Đăng ký</a>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

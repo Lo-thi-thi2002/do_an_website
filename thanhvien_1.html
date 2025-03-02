@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TỔNG GIÁM ĐỐC</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: rgb(147, 228, 25);
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/thi_2.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Lô Thị Thi <br>
+    Sinh ngày: 02/10/2002 <br>
+    Quê quán : Nghệ an <br>
+    Nơi công tác: Công ty TNHH NTKN <br>
+    Chức vụ: Tổng giám đốc <br>
+    </p>
+    <p> Từ khi còn nhỏ, tôi đã có niềm đam mê với thời trang và giày dép. Sau khi tốt nghiệp đại học với bằng cử nhân kinh tế, tôi quyết định theo đuổi ước mơ và thành lập công ty giày của riêng mình.
+
+        Dưới sự lãnh đạo của tôi, công ty giày NTKN đã không ngừng phát triển và mở rộng. Bà luôn chú trọng đến việc nghiên cứu và phát triển sản phẩm, đảm bảo mỗi đôi giày được sản xuất ra đều đạt chất lượng cao nhất. Bên cạnh đó, bà cũng không ngừng tìm kiếm và áp dụng những công nghệ mới vào quy trình sản xuất, giúp tiết kiệm chi phí và nâng cao hiệu quả kinh doanh.
+        
+        Ngoài ra, Tôi còn đặc biệt quan tâm đến việc phát triển nguồn nhân lực và luôn tạo điều kiện tốt nhất để nhân viên của mình có thể học hỏi và phát triển bản thân. Nhờ vào sự quan tâm và động viên của bà, đội ngũ nhân viên của công ty luôn làm việc với tinh thần hăng say và nhiệt huyết.
+        
+        Không chỉ giỏi trong việc kinh doanh, tôi còn là một người mẹ tuyệt vời và luôn biết cách cân bằng giữa công việc và gia đình, dành thời gian chăm sóc và yêu thương các con. Gia đình hạnh phúc và sự nghiệp thăng hoa chính là minh chứng cho sự nỗ lực và cống hiến không ngừng của tôi.
+        
+        Với tài năng và tâm huyết, tôi đã trở thành tấm gương sáng cho nhiều phụ nữ khác noi theo. Bà đã chứng minh rằng, với sự quyết tâm và nỗ lực, phái yếu cũng có thể đạt được những thành công rực rỡ trong thế giới kinh doanh đầy cạnh tranh.</p>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/thi_1.jpg",
+            "hinh_anh/thanhvien/thi_2.jpg",
+            "hinh_anh/thanhvien/thi_3.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+    </script>
+</body>
+</html>

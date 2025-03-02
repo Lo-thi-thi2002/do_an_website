@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tầm nhìn & kiếm soát</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 5px;
+            padding: 5px;
+            background-color: greenyellow;
+        }
+        .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+    </style>
+    <div>
+        <img id="slideshow" class="slideshow" src="hinh_anh/about/about_7.jpg" alt="Hình ảnh">
+        </div>
+   <div>
+    <h1>Về NTKN</h1>
+
+Chào mừng bạn đến với NTKN, nơi tinh hoa thủ công gặp gỡ phong cách. Được thành lập với niềm đam mê hoàn hảo và cam kết về chất lượng, NTKN đã trở thành cái tên đáng tin cậy trong ngành công nghiệp giày da. Hành trình của chúng tôi bắt đầu với tầm nhìn tạo ra những đôi giày không chỉ đẹp mà còn bền vững theo thời gian.
+
+Tại NTKN, chúng tôi tin rằng mỗi đôi giày đều kể một câu chuyện. Những nghệ nhân tài ba của chúng tôi tỉ mỉ chế tác từng đôi giày bằng những loại da tốt nhất và kỹ thuật truyền thống được truyền lại qua nhiều thế hệ. Sự cống hiến này đảm bảo rằng mỗi sản phẩm mang tên NTKN là một tuyệt tác của thiết kế và độ bền.
+
+Bộ sưu tập của chúng tôi đa dạng từ cổ điển đến hiện đại, phù hợp với nhiều sở thích và dịp khác nhau. Dù bạn đang tìm kiếm đôi giày hoàn hảo cho buổi họp kinh doanh, dạo phố hay sự kiện đặc biệt, NTKN đều có sự lựa chọn cho bạn. Mỗi thiết kế là sự kết hợp giữa thanh lịch và tính năng, mang lại sự thoải mái và phong cách tối đa cho khách hàng.
+
+Sự bền vững là trái tim trong hoạt động của chúng tôi. Chúng tôi cam kết thực hành đạo đức và lựa chọn nguyên liệu một cách có trách nhiệm. Mục tiêu của chúng tôi là tạo ra tác động tích cực đến môi trường trong khi vẫn mang đến những sản phẩm chất lượng cao cho khách hàng.
+
+Tại NTKN, chúng tôi tự hào về mối quan hệ với khách hàng. Đội ngũ tận tâm của chúng tôi luôn sẵn sàng hỗ trợ bạn, đảm bảo trải nghiệm mua sắm suôn sẻ từ đầu đến cuối. Chúng tôi trân trọng ý kiến đóng góp của bạn và không ngừng nỗ lực để vượt qua mong đợi của bạn.
+
+Hãy cùng chúng tôi trên hành trình tiếp tục sáng tạo và nâng cao tiêu chuẩn của ngành công nghiệp giày da. NTKN không chỉ là một thương hiệu; đó là một truyền thống của sự xuất sắc mà bạn có thể tin tưởng.
+
+Cảm ơn bạn đã chọn NTKN – nơi giấc mơ về đôi giày hoàn hảo trở thành hiện thực.
+   </div>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        const images = [
+            "hinh_anh/about/about_1.jpg",
+            "hinh_anh/about/about_2.jpg",
+            "hinh_anh/about/about_3.jpg",
+            "hinh_anh/about/about_4.jpg",
+            "hinh_anh/about/about_5.jpg",
+            "hinh_anh/anh/anh_6.jfif",
+            "hinh_anh/anh/anh_7.jfif",
+            "hinh_anh/anh/anh_8.jfif",
+            "hinh_anh/anh/anh_9.jfif",
+            "hinh_anh/anh/anh_10.jfif",
+            "hinh_anh/anh/anh_11.jfif",
+            "hinh_anh/anh/anh_12.jfif",
+            "hinh_anh/anh/anh_13.jfif",
+            "hinh_anh/anh/anh_14.jfif",
+            "hinh_anh/anh/anh_15.jfif",
+
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+</body>
+</html>

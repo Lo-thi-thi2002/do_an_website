@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tầm nhìn & kiếm soát</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 5px;
+            padding: 5px;
+            background-color: greenyellow;
+        }
+        .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+    </style>
+    <div>
+        <img id="slideshow" class="slideshow" src="hinh_anh/anh/anh_1.jfif" alt="Hình ảnh">
+        </div>
+    <h5 class="content">
+Trong bối cảnh thị trường ngày càng cạnh tranh và thay đổi nhanh chóng, một công ty giày muốn đạt được thành công lâu dài cần phải có một tầm nhìn chiến lược rõ ràng và hệ thống kiểm soát hiệu quả. Tầm nhìn giúp định hướng cho các hoạt động của công ty, trong khi kiểm soát giúp đảm bảo mọi quá trình diễn ra đúng kế hoạch và đạt được mục tiêu đã đề ra.
+<h3>Tầm Nhìn</h3>
+
+Tầm nhìn của công ty giày chính là khát vọng, mục tiêu dài hạn mà công ty hướng tới. Đây là kim chỉ nam giúp công ty xác định phương hướng phát triển và xây dựng chiến lược phù hợp. Một tầm nhìn mạnh mẽ và rõ ràng sẽ tạo động lực cho toàn bộ đội ngũ nhân viên cùng chung tay phát triển công ty.
+
+Công ty giày của chúng tôi đặt ra tầm nhìn trở thành thương hiệu giày hàng đầu tại thị trường trong nước và quốc tế, mang đến cho khách hàng những sản phẩm chất lượng cao, thiết kế thời trang và giá cả hợp lý. Chúng tôi luôn nỗ lực để không ngừng cải tiến và sáng tạo, nhằm đáp ứng nhu cầu ngày càng cao của người tiêu dùng.
+
+<h3>Kiểm Soát</h3>
+
+Kiểm soát là quá trình giám sát, đánh giá và điều chỉnh các hoạt động của công ty để đảm bảo chúng diễn ra đúng kế hoạch và đạt được các mục tiêu đã đề ra. Hệ thống kiểm soát hiệu quả giúp công ty phát hiện và khắc phục kịp thời các sai sót, nâng cao hiệu suất làm việc và tối ưu hóa nguồn lực.
+
+Tại công ty giày của chúng tôi, kiểm soát được thực hiện thông qua nhiều biện pháp và công cụ khác nhau. Chúng tôi áp dụng các phương pháp quản lý chất lượng hiện đại để đảm bảo mọi sản phẩm xuất xưởng đều đạt tiêu chuẩn cao nhất. Bên cạnh đó, chúng tôi cũng sử dụng các phần mềm quản lý và hệ thống báo cáo để theo dõi và đánh giá hiệu suất làm việc của từng bộ phận.
+
+Ngoài ra, việc đào tạo và phát triển nguồn nhân lực cũng đóng vai trò quan trọng trong hệ thống kiểm soát của công ty. Chúng tôi luôn chú trọng đến việc nâng cao kỹ năng và kiến thức cho nhân viên, giúp họ có đủ năng lực để thực hiện các nhiệm vụ được giao và đóng góp vào sự phát triển của công ty.
+    </h5> 
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        const images = [
+            "hinh_anh/anh/anh_1.jfif",
+            "hinh_anh/anh/anh_2.jfif",
+            "hinh_anh/anh/anh_3.jfif",
+            "hinh_anh/anh/anh_4.jfif",
+            "hinh_anh/anh/anh_5.jfif",
+            "hinh_anh/anh/anh_6.jfif",
+            "hinh_anh/anh/anh_7.jfif",
+            "hinh_anh/anh/anh_8.jfif",
+            "hinh_anh/anh/anh_9.jfif",
+            "hinh_anh/anh/anh_10.jfif",
+            "hinh_anh/anh/anh_11.jfif",
+            "hinh_anh/anh/anh_12.jfif",
+            "hinh_anh/anh/anh_13.jfif",
+            "hinh_anh/anh/anh_14.jfif",
+            "hinh_anh/anh/anh_15.jfif",
+
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+</body>
+</html>

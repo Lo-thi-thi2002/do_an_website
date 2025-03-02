@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Công Ty NTKN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+
+        <div id="welcomeMessage" style="display:none;">
+            <h1>Xin chào <span id="user"></span>!</h1>
+            <h3>Chào mừng đến với công ty của chúng tôi</h3>
+        </div>
+        <img src="hinh_anh/logo 400.jpg" alt="logo">
+    </header>
+
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li class="dropdown">
+                <a href="#">Sản phẩm</a>
+                <ul class="submenu">
+                    <li><a href="#" onclick="showProducts('giày nam')">Giày Nam</a></li> 
+                    <li><a href="#" onclick="showProducts('giày nữ')">Giày Nữ</a></li> 
+                    <li><a href="#" onclick="showProducts('giày bé trai')">Giày Bé Trai</a></li> 
+                    <li><a href="#" onclick="showProducts('giày bé gái')">Giày Bé Gái</a></li> 
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Giới thiệu</a>
+                <ul class="submenu">
+                    <li>
+                        <a href="about.html">Về chúng tôi</a>
+                        
+                    </li>
+                    <li>
+                        <a href="team.html">Đội ngũ</a>
+                        
+                    </li>
+                    <li>
+                        <a href="vision.html">Tầm nhìn & Kiểm soát</a>
+                       
+                    </li>                
+                </ul>
+            </li>
+            <li><a href="login.html">Đăng nhập</a></li>
+           
+        </ul>
+        <div class="menu-icon">☰</div>
+    </nav>
+</div>
+<h2 id="category-title">Chọn danh mục để xem thư viện sản phẩm</h2>
+<div class="gallery" id="product-gallery">
+    <!-- Thư viện sản phẩm sẽ hiển thị ở đây -->
+</div>
+    <h2>DANH SÁCH NHÂN VIÊN CÔNG TY</h2>
+    <div class="slide-contenner">
+    <div class="slide" onclick="window.location.href='thanhvien_1.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/thi_3.jpg');">
+          
+        </div>
+        <div class="content">
+            <h2>LÔ THỊ THI</h2>
+            <p>CEO</p>
+        </div>
+    </div>
+    <div class="slide" onclick="window.location.href='thanhvien_2.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/nghia_1.jpg');">
+        </div>
+        <div class="content">
+            <h2>DƯƠNG TRỌNG NGHĨA</h2>
+            <p> Deputy General Manager</p>
+        </div>
+    </div>
+    <div class="slide" onclick="window.location.href='thanhvien_3.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/nhat_1.jpg');">
+        </div>
+        <div class="content">
+            <h2>NGUYỄN ANH NHẬT</h2>
+            <p>Manager Equipment</p>
+        </div>
+    </div>
+    <div class="slide" onclick="window.location.href='thanhvien_4.html'">
+        <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/khoa_1.jpg');">
+        </div>
+        <div class="content">
+            <h2>TRẦN PHẠM MINH KHOA</h2>
+            <p>EPUTY MANAGER OF MARKETING</p>
+        </div>
+    </div>
+    </div>
+    <img id="slideshow" class="slideshow" src="hinh_anh/about/about_10.jpg" alt="Hình ảnh">
+    <!-- Lightbox hiển thị ảnh lớn -->
+    <div id="lightbox" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img id="lightbox-img" src="">
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+    <script src="scripts.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+ 
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phó phòng maketting</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: greenyellow;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/khoa_1.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Trần Phạm Minh Khoa <br>
+    Sinh ngày:18/05/2003<br>
+    Quê quán : An Giang <br>
+    Nơi công tác: Công ty TNHH NTKN <br>
+    Chức vụ: Phó phòng Maketting <br>
+    </p>
+    <p> 
+        Tôi là Trần Văn Khoa, hiện đang giữ chức vụ Phó phòng Marketing tại công ty NTKN, chuyên về ngành giày da. 
+        Với sự nỗ lực và khả năng sáng tạo, tôi đã được thăng chức lên vị trí Phó phòng Marketing. Ở vị trí này, tôi có trách nhiệm hỗ trợ trưởng phòng trong việc lên kế hoạch và triển khai các chiến lược marketing cho công ty. Tôi luôn chú trọng đến việc nghiên cứu thị trường và hiểu rõ nhu cầu của khách hàng để đảm bảo rằng các sản phẩm giày da của chúng tôi luôn đáp ứng được mong đợi của người tiêu dùng.
+        
+        Trong công việc, tôi luôn cố gắng tạo ra một môi trường làm việc tích cực và khuyến khích sự sáng tạo từ đội ngũ của mình. Tôi thường xuyên tổ chức các buổi thảo luận và workshop để các thành viên có thể trao đổi ý tưởng và học hỏi lẫn nhau. Sự đoàn kết và tinh thần làm việc nhóm là yếu tố then chốt giúp chúng tôi đạt được nhiều thành công trong các chiến dịch marketing.
+        
+        Ngoài ra, tôi còn tích cực tham gia vào các hoạt động xã hội và từ thiện của công ty. Tôi tin rằng việc gắn kết với cộng đồng không chỉ giúp nâng cao hình ảnh của công ty mà còn mang lại những giá trị tinh thần to lớn cho bản thân. Khi không làm việc, tôi thường tham gia vào các hoạt động thể thao và du lịch để duy trì sức khỏe và tinh thần thoải mái.
+        
+        Trong suốt quá trình làm việc tại công ty NTKN, tôi đã học hỏi được nhiều kinh nghiệm quý báu và luôn nỗ lực phấn đấu để đóng góp vào sự phát triển của công ty. Tôi tin rằng với niềm đam mê và tâm huyết, tôi sẽ tiếp tục đạt được những thành công mới trong sự nghiệp và đóng góp tích cực vào ngành giày da.
+    </p>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/khoa_1.jpg",
+            "hinh_anh/thanhvien/khoa_2.jpg",
+            "hinh_anh/thanhvien/khoa_3.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+    </script>
+</body>
+</html>
+    

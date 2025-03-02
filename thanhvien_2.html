@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> PHÓ TỔNG GIÁM ĐỐC</title>
+</head>
+<body>
+    <style>
+ body{
+    background-color: greenyellow;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+ }
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+.back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+    </style>
+<div>
+<img id="slideshow" class="slideshow" src="hinh_anh/thanhvien/nghia_2.jpg" alt="Hình ảnh">
+</div>
+    <h1>Giới thiệu bản thân</h1>
+    <p>
+    Họ và Tên : Dương Trọng Nghĩa <br>
+    Sinh ngày: 02/10/2004<br>
+    Quê quán : DăkLăk <br>
+    Nơi công tác: Công ty TNHH NTKN <br>
+    Chức vụ: Phó Tổng giám đốc <br>
+    </p>
+    <p>  hiện đang giữ vị trí Phó Tổng Giám Đốc tại Công ty TNHH NTKN, một công ty chuyên sản xuất và buôn bán giày. Với kinh nghiệm trong công tác quản lý và chuyên môn vững vàng, tôi tham gia vào việc hoạch định chiến lược phát triển, điều hành hoạt động sản xuất, cũng như phát triển các kênh phân phối nhằm nâng cao hiệu quả kinh doanh của công ty.
+        Tại NTKN, tôi luôn chú trọng đến việc nâng cao chất lượng sản phẩm, cải tiến quy trình sản xuất, cũng như phát triển các mẫu mã giày mới mẻ, đáp ứng nhu cầu đa dạng của thị trường. Với sự sáng tạo, nhiệt huyết và tinh thần làm việc không ngừng nghỉ, tôi và đội ngũ của mình luôn nỗ lực để công ty trở thành một trong những đơn vị dẫn đầu trong ngành sản xuất giày.
+        Tôi mong muốn được tiếp tục phát triển và mở rộng mối quan hệ hợp tác bền vững với các đối tác, khách hàng, đồng thời tạo dựng một môi trường làm việc chuyên nghiệp, sáng tạo cho tất cả các thành viên trong công ty.</p>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <script>
+        const images = [
+            "hinh_anh/thanhvien/nghia_1.jpg",
+            "hinh_anh/thanhvien/nghia_2.jpg",
+            "hinh_anh/thanhvien/nghia_3.jpg",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+    </script>
+</body>
+</html>

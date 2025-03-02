@@ -1,0 +1,307 @@
+:root {
+  --primary-color: #51ff00; /* Màu chính */
+  --secondary-color:#b3f595; /* Màu nền */
+  --hover-bg-color: #dff758; /* Màu nền khi hover */
+  --hover-text-color: #f6f7ff; /* Màu chữ khi hover */
+  --text-color:rgb(8, 8, 8); /* Màu chữ mặc định */
+}
+/* Định dạng chung cho toàn bộ trang */
+body {
+  font-family: Arial, sans-serif; /* Sử dụng font chữ phổ biến */
+  margin: 0;
+  padding: 0;
+  background-color:var(--secondary-color); /* Màu nền nhẹ */
+  text-align: center;
+}
+
+/* Định dạng phần header */
+header {
+  background-color:var(--secondary-color); /* Màu nền trắng cho header */
+  padding: 20px;
+  display: flex;
+}
+
+header img {
+  width: 150px; /* Giới hạn kích thước logo */
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Định dạng thanh điều hướng */
+.navbar {
+ 
+  background-color: var(--hover-bg-color); /* Màu nền tối cho thanh điều hướng */
+  padding: 10px 0;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.menu li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--text-color); /* Màu chữ trắng */
+  padding: 10px 15px;
+  display: block;
+}
+
+.menu a:hover {
+  background-color: var(--hover-bg-color); /* Hiệu ứng đổi màu khi rê chuột */
+  border-radius: 5px;
+  color: var(--hover-text-color);
+}
+
+/* Định dạng menu con */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--hover-bg-color);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 4px 8px rgba(39, 4, 240, 0.2);
+}
+
+.dropdown:hover .submenu {
+  display: block;
+  background-color: #0818fc;
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu a {
+  color: black;
+  padding: 10px;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #d0f30a;
+  color: #0818fc;
+}
+
+/* Định dạng danh sách nhân viên */
+.slide-contenner {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.slide {
+  width: 200px;
+  background-color: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  border: #51ff00;
+}
+
+.hover-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.hover-image:hover{
+  transform: scale(1.5);
+}
+.content h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.content p {
+  color: #777;
+}
+
+/* Định dạng slideshow */
+.slideshow {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Định dạng thư viện sản phẩm */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.gallery img {
+  width: 200px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s;
+  background-color: #ddd;
+  padding: auto;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+   }
+
+/* Định dạng Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: rgb(17, 17, 17);
+  cursor: pointer;
+}
+
+/* Định dạng menu con */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  width: 200px;
+}
+
+.submenu a {
+  color: black;
+  padding: 10px;
+  display: block;
+}
+
+.submenu a:hover {
+  background-color: #ddd;
+}
+
+
+.hover-image {
+  width: 100%;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.content h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.content p {
+  color: #777;
+}
+
+/* Định dạng slideshow */
+.slideshow {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+
+
+.menu-icon{
+  display: none;
+  font-size: 24px;
+  color: var(--hover-text-color);
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: flex-start; /* Căn logo và menu-icon về bên trái */
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0; /* Đổi vị trí sang trái */
+    background-color: var(--primary-color);
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .menu.show-menu {
+    display: flex;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu-icon {
+    display: block;
+    margin-right: 20px; /* Thêm khoảng cách giữa menu-icon và logo */
+  }
+
+  .menu-icon {
+    order: -1; /* Đổi vị trí của menu-icon về bên trái */
+  }
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown ul {
+    position: absolute;
+    left: 100% !important;
+    top: 0 !important;
+  }
+}
+

@@ -1,0 +1,48 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    bottom: 0%;
+  }
+  
+  #container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  #content {
+    flex: 1;
+  }
+  
+  #footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+  }
+  
+  .footer-column {
+    width: 30%;
+  }
+  
+  h4 {
+    color: #f1c40f;
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #1abc9c;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  

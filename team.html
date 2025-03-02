@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tầm nhìn & kiếm soát</title>
+</head>
+<body>
+    <style>
+        body{
+            margin: 5px;
+            padding: 5px;
+            background-color: greenyellow;
+        }
+        .back-btn {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+}
+.slideshow {
+  width: 80%;
+  max-width: 300px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+
+}
+    </style>
+    <div>
+        <img id="slideshow" class="slideshow" src="hinh_anh/team/team_1.jpg" alt="Hình ảnh">
+        </div>
+   <div>
+    <h1>Đội ngũ NTKN</h1>
+
+    Tại NTKN, chúng tôi tự hào về đội ngũ nhân viên tận tâm và tài năng, những người đã và đang góp phần tạo nên thành công của thương hiệu. Mỗi thành viên của NTKN đều mang đến sự đa dạng về kinh nghiệm, kỹ năng và sáng tạo, cùng chung một mục tiêu - mang đến những sản phẩm giày da chất lượng cao và phong cách nhất cho khách hàng.
+    
+   <h3> Ban lãnh đạo: <h3> Ban lãnh đạo của NTKN là những người có tầm nhìn chiến lược và đam mê sâu sắc với ngành công nghiệp giày da. Họ không chỉ định hướng phát triển công ty mà còn luôn dẫn đầu trong việc áp dụng những công nghệ tiên tiến và xu hướng mới nhất vào sản phẩm.
+    
+   <h3> Đội ngũ thiết kế: <h3> Những nhà thiết kế của NTKN là những nghệ nhân tài ba, luôn tìm kiếm sự hoàn hảo trong từng chi tiết. Họ kết hợp giữa nghệ thuật truyền thống và xu hướng hiện đại để tạo ra những mẫu giày độc đáo, mang đậm dấu ấn cá nhân và phong cách.
+    
+    <h3>Đội ngũ sản xuất: <h3> Đội ngũ sản xuất của chúng tôi gồm những thợ thủ công lành nghề, tận tâm và yêu nghề. Họ sử dụng những kỹ thuật thủ công tinh xảo kết hợp với các thiết bị công nghệ hiện đại để đảm bảo mỗi sản phẩm ra đời đều đạt tiêu chuẩn chất lượng cao nhất.
+    
+    <h3>Bộ phận kinh doanh và tiếp thị: <h3> Những chuyên gia kinh doanh và tiếp thị của NTKN luôn nỗ lực không ngừng để mang thương hiệu và sản phẩm của chúng tôi đến gần hơn với khách hàng. Họ hiểu rõ nhu cầu và mong muốn của thị trường, từ đó xây dựng chiến lược tiếp thị và bán hàng hiệu quả.
+    
+   <h3> Dịch vụ khách hàng:  <h3>Chúng tôi tin rằng sự hài lòng của khách hàng là nền tảng cho sự phát triển bền vững của NTKN. Đội ngũ dịch vụ khách hàng của chúng tôi luôn sẵn sàng lắng nghe, hỗ trợ và giải đáp mọi thắc mắc của khách hàng, đảm bảo trải nghiệm mua sắm của bạn luôn thuận lợi và vui vẻ.
+    
+    Tại NTKN, chúng tôi không chỉ là một tập thể mà còn là một gia đình, nơi mỗi thành viên đều có cơ hội phát triển và cống hiến. Chúng tôi tự hào về những gì mình đã đạt được và luôn hướng tới tương lai với niềm tin vào sự sáng tạo và đổi mới.
+   </div>
+    <div>
+        <a href="index.html" class="back-btn">Quay lại</a>
+    </div>
+    <div id="footer-container"></div>
+    <script>
+        const images = [
+            "hinh_anh/team/team_1.jpg",
+            "hinh_anh/team/team_2.jpg",
+            "hinh_anh/team/team_3.jpg",
+            "hinh_anh/team/team_4.jpg",
+            "hinh_anh/team/team_5.jpg",
+            "hinh_anh/team/team_6.jpg",
+            "hinh_anh/team/team_7.jpg",
+            "hinh_anh/about/about_1.jpg",
+            "hinh_anh/about/about_2.jpg",
+            "hinh_anh/about/about_3.jpg",
+            "hinh_anh/about/about_4.jpg",
+            "hinh_anh/about/about_5.jpg",
+            "hinh_anh/anh/anh_6.jfif",
+            "hinh_anh/anh/anh_7.jfif",
+            "hinh_anh/anh/anh_8.jfif",
+            "hinh_anh/anh/anh_9.jfif",
+            "hinh_anh/anh/anh_10.jfif",
+            "hinh_anh/anh/anh_11.jfif",
+            "hinh_anh/anh/anh_12.jfif",
+            "hinh_anh/anh/anh_13.jfif",
+            "hinh_anh/anh/anh_14.jfif",
+            "hinh_anh/anh/anh_15.jfif",
+            "hinh_anh/anh/anh_16.jfif",
+            "hinh_anh/anh/anh_17.jfif",
+            "hinh_anh/anh/anh_18.jfif",
+            "hinh_anh/anh/anh_19.jfif",
+            "hinh_anh/anh/anh_20.jfif",
+          ];
+          
+          let index = 0;
+          function changeImage() {
+              index = (index + 1) % images.length;
+              document.getElementById("slideshow").src = images[index];
+          }
+          setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
+        fetch("footer.html")
+          .then((response) => response.text())
+          .then((data) => {
+            document.getElementById("footer-container").innerHTML = data;
+          });
+      </script>
+</body>
+</html>
