@@ -65,6 +65,7 @@ header img {
   background-color: var(--hover-bg-color); /* Thay đổi màu nền khi rê chuột qua liên kết, sử dụng biến --hover-bg-color */
   border-radius: 5px; /* Làm tròn các góc của liên kết với bán kính 5px khi rê chuột qua */
   color: var(--hover-text-color); /* Thay đổi màu chữ khi rê chuột qua liên kết, sử dụng biến --hover-text-color */
+  text-decoration: none;
 }
 
 /* Định dạng menu con */
@@ -264,4 +265,12 @@ header img {
   background-position: center; /* Canh giữa ảnh trong khung hình. */
   border-radius: 10px; /* Làm tròn các góc của ảnh với bán kính 10px. */
 }
-
+/* ---------------------------------------------DƯƠNG TRỌNG NGHĨA------------------------------------------------------- */
+button{
+  background-color: var(--hover-bg-color);
+  border: none;
+  color: var(--text-color);
+}
+button:hover{
+  color: var(--hover-text-color);
+}

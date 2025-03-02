@@ -184,4 +184,12 @@
             document.getElementById("user").innerText = username;
             document.getElementById("welcomeMessage").style.display = "block";
         }
+        // -----------------------------------------------DƯƠNG TRỌNG NGHĨA-----------------------------------
+        // ĐĂNG XUẤT
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            // Xóa thông tin xác thực của người dùng (ví dụ: token đăng nhập, cookie)
+            localStorage.removeItem('authToken'); // Ví dụ: nếu bạn lưu token trong localStorage
+            // Chuyển hướng người dùng đến trang đăng nhập hoặc trang chủ
+            window.location.href = 'login.html'; // Điều chỉnh URL theo trang bạn muốn điều hướng đến
+        });
         

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- ------------------------------TRẦN PHẠM MINH KHOA---------------------------------------- -->
     <header>
 
         <div id="welcomeMessage" style="display:none;">
@@ -44,18 +45,32 @@
                        
                     </li>                
                 </ul>
+            
+            <!-- -----------------------------------------DƯƠNG TRỌNG NGHĨA--------------------------------- -->
             </li>
             <li><a href="login.html">Đăng nhập</a></li>
-           
+            <button id="logoutButton">Đăng xuất</button>
         </ul>
+        <!-- KHOA LÀM RESPONSIVE -->
+        
         <div class="menu-icon">☰</div>
     </nav>
 </div>
+
+<!-- ------------------------------------------LÔ THỊ THI----------------------------------------------------- -->
+
 <h2 id="category-title">Chọn danh mục để xem thư viện sản phẩm</h2>
 <div class="gallery" id="product-gallery">
     <!-- Thư viện sản phẩm sẽ hiển thị ở đây -->
+      <!-- Lightbox hiển thị ảnh lớn -->
+    <div id="lightbox" class="lightbox">
+        <a href="#" class="close">&times;</a>
+        <img id="lightbox-img" src="">
+    </div>
 </div>
-    <h2>DANH SÁCH NHÂN VIÊN CÔNG TY</h2>
+    <!-- ----------------------------------------------NGUYỄN ANH NHẬT----------------------------------------- -->
+
+<h2>DANH SÁCH NHÂN VIÊN CÔNG TY</h2>
     <div class="slide-contenner">
     <div class="slide" onclick="window.location.href='thanhvien_1.html'">
         <div class="hover-image" style="background-image: url('hinh_anh/thanhvien/thi_3.jpg');">
@@ -91,12 +106,9 @@
         </div>
     </div>
     </div>
+    
+    <!-- ------------------------------TRẦN PHẠM MINH KHOA--------------------------------------- -->
     <img id="slideshow" class="slideshow" src="hinh_anh/about/about_10.jpg" alt="Hình ảnh">
-    <!-- Lightbox hiển thị ảnh lớn -->
-    <div id="lightbox" class="lightbox">
-        <a href="#" class="close">&times;</a>
-        <img id="lightbox-img" src="">
-    </div>
     <footer id="footer-container"></footer>
     <script>
         fetch("footer.html")
