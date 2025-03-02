@@ -153,6 +153,7 @@
                 this.style.display = "none";
             }
         });
+        // trần phạm minh khoa
         // responsive
         document.querySelector('.menu-icon').addEventListener('click', function() {
             document.querySelector('.menu').classList.toggle('show-menu');
