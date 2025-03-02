@@ -153,6 +153,11 @@
                 this.style.display = "none";
             }
         });
+        // responsive
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            document.querySelector('.menu').classList.toggle('show-menu');
+        });
+        
         // chạy sline ảnh
         const images = [
             "hinh_anh/about/about_1.jpg",

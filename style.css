@@ -1,3 +1,5 @@
+/* ---------------------------------------------TRẦN PHẠM MINH KHOA--------------------------------------------------- */
+/* màu chữ mặc định cho trang web */
 :root {
   --primary-color: #51ff00; /* Màu chính */
   --secondary-color:#b3f595; /* Màu nền */
@@ -8,300 +10,258 @@
 /* Định dạng chung cho toàn bộ trang */
 body {
   font-family: Arial, sans-serif; /* Sử dụng font chữ phổ biến */
-  margin: 0;
-  padding: 0;
-  background-color:var(--secondary-color); /* Màu nền nhẹ */
-  text-align: center;
+  margin: 0; /* Loại bỏ lề mặc định của trang. */
+  padding: 0; /* Loại bỏ khoảng đệm mặc định của trang. */
+  background-color: var(--secondary-color); /* Màu nền nhẹ, sử dụng biến màu --secondary-color. */
+  text-align: center; /* Canh giữa văn bản theo chiều ngang. */
 }
 
 /* Định dạng phần header */
 header {
-  background-color:var(--secondary-color); /* Màu nền trắng cho header */
-  padding: 20px;
-  display: flex;
+  background-color: var(--secondary-color); /* Màu nền trắng cho header, sử dụng biến màu --secondary-color. */
+  padding: 20px; /* Thêm khoảng đệm bên trong header là 20px. */
+  display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong header. */
 }
 
 header img {
-  width: 150px; /* Giới hạn kích thước logo */
-  border-radius: 50%;
-  position: absolute;
-  right: 0;
-  top: 0;
+  width: 150px; /* Giới hạn kích thước logo là 150px. */
+  border-radius: 50%; /* Làm tròn các góc của ảnh để tạo thành hình tròn. */
+  position: absolute; /* Đặt ảnh ở vị trí tuyệt đối so với phần tử chứa nó. */
+  right: 0; /* Đặt ảnh cách phía phải 0px. */
+  top: 0; /* Đặt ảnh cách phía trên 0px. */
 }
 
-/* Định dạng thanh điều hướng */
+/* Định dạng chung cho thanh điều hướng */
 .navbar {
- 
-  background-color: var(--hover-bg-color); /* Màu nền tối cho thanh điều hướng */
-  padding: 10px 0;
+  background-color: var(--hover-bg-color); /* Màu nền của thanh điều hướng */
+  padding: 10px 0; /* Thêm khoảng đệm trên và dưới của thanh điều hướng là 10px */
 }
 
+/* Định dạng menu */
 .menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center;
+  list-style: none; /* Loại bỏ dấu đầu dòng của danh sách */
+  padding: 0; /* Loại bỏ khoảng đệm mặc định của danh sách */
+  margin: 0; /* Loại bỏ lề mặc định của danh sách */
+  display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các mục trong danh sách */
+  justify-content: center; /* Canh giữa các mục trong danh sách theo chiều ngang */
 }
 
+/* Định dạng các phần tử trong menu */
 .menu li {
-  position: relative;
-  margin: 0 15px;
+  position: relative; /* Đặt vị trí của phần tử li trong menu là tương đối so với phần tử chứa nó */
+  margin: 0 15px; /* Thêm khoảng cách 15px ở cả hai bên của phần tử li */
 }
 
+/* Định dạng liên kết trong menu */
 .menu a {
-  text-decoration: none;
-  color: var(--text-color); /* Màu chữ trắng */
-  padding: 10px 15px;
-  display: block;
+  text-decoration: none; /* Loại bỏ gạch chân mặc định của liên kết */
+  color: var(--text-color); /* Sử dụng màu chữ mặc định từ biến --text-color */
+  padding: 10px 15px; /* Thêm khoảng đệm bên trong liên kết là 10px trên và dưới, 15px trái và phải */
+  display: block; /* Hiển thị liên kết dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa */
 }
 
+/* Hiệu ứng khi rê chuột qua liên kết trong menu */
 .menu a:hover {
-  background-color: var(--hover-bg-color); /* Hiệu ứng đổi màu khi rê chuột */
-  border-radius: 5px;
-  color: var(--hover-text-color);
+  background-color: var(--hover-bg-color); /* Thay đổi màu nền khi rê chuột qua liên kết, sử dụng biến --hover-bg-color */
+  border-radius: 5px; /* Làm tròn các góc của liên kết với bán kính 5px khi rê chuột qua */
+  color: var(--hover-text-color); /* Thay đổi màu chữ khi rê chuột qua liên kết, sử dụng biến --hover-text-color */
 }
 
 /* Định dạng menu con */
 .submenu {
-  display: none;
-  position: absolute;
-  background-color: var(--hover-bg-color);
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  box-shadow: 0px 4px 8px rgba(39, 4, 240, 0.2);
+  display: none; /* Ẩn menu con */
+  position: absolute; /* Đặt vị trí của menu con là tuyệt đối so với phần tử chứa nó */
+  background-color: var(--hover-bg-color); /* Màu nền của menu con, sử dụng biến màu --hover-bg-color */
+  list-style: none; /* Loại bỏ dấu đầu dòng của danh sách */
+  padding: 0; /* Loại bỏ khoảng đệm mặc định của danh sách */
+  margin: 0; /* Loại bỏ lề mặc định của danh sách */
+  top: 100%; /* Đặt menu con phía dưới phần tử chứa */
+  left: 0; /* Canh trái của menu con với phần tử chứa */
+  box-shadow: 0px 4px 8px rgba(39, 4, 240, 0.2); /* Tạo bóng đổ cho menu con với độ mờ 8px và màu xanh nhạt */
 }
 
+/* Hiển thị menu con khi rê chuột qua phần tử chứa */
 .dropdown:hover .submenu {
-  display: block;
-  background-color: #0818fc;
+  display: block; /* Hiển thị menu con */
+  background-color: #0818fc; /* Thay đổi màu nền của menu con khi rê chuột qua phần tử chứa */
 }
 
+/* Định dạng các phần tử li trong menu con */
 .submenu li {
-  width: 200px;
+  width: 200px; /* Thiết lập chiều rộng của các phần tử li trong submenu là 200px */
 }
 
+/* Định dạng liên kết trong menu con */
 .submenu a {
-  color: black;
-  padding: 10px;
-  display: block;
+  color: black; /* Thiết lập màu chữ của liên kết là màu đen */
+  padding: 10px; /* Thêm khoảng đệm bên trong liên kết là 10px */
+  display: block; /* Hiển thị liên kết dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa */
 }
 
+/* Hiệu ứng khi rê chuột qua liên kết trong menu con */
 .submenu a:hover {
-  background-color: #d0f30a;
-  color: #0818fc;
+  background-color: #d0f30a; /* Thay đổi màu nền của liên kết khi rê chuột qua là màu vàng nhạt (#d0f30a) */
+  color: #0818fc; /* Thay đổi màu chữ của liên kết khi rê chuột qua là màu xanh đậm (#0818fc) */
 }
 
-/* Định dạng danh sách nhân viên */
-.slide-contenner {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.slide {
-  width: 200px;
-  background-color: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  cursor: pointer;
-  border: #51ff00;
-}
-
-.hover-image {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.hover-image:hover{
-  transform: scale(1.5);
-}
-.content h2 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.content p {
-  color: #777;
-}
-
-/* Định dạng slideshow */
-.slideshow {
-  width: 80%;
-  max-width: 800px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-}
-
-/* Định dạng thư viện sản phẩm */
-.gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-}
-
-.gallery img {
-  width: 200px;
-  height: 150px;
-  border-radius: 5px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: transform 0.3s;
-  background-color: #ddd;
-  padding: auto;
-}
-
-.gallery img:hover {
-  transform: scale(1.1);
-   }
-
-/* Định dạng Lightbox */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  color: rgb(17, 17, 17);
-  cursor: pointer;
-}
-
-/* Định dạng menu con */
-.submenu {
-  display: none;
-  position: absolute;
-  background-color: white;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  top: 100%;
-  left: 0;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.dropdown:hover .submenu {
-  display: block;
-}
-
-.submenu li {
-  width: 200px;
-}
-
-.submenu a {
-  color: black;
-  padding: 10px;
-  display: block;
-}
-
-.submenu a:hover {
-  background-color: #ddd;
-}
-
-
-.hover-image {
-  width: 100%;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.content h2 {
-  font-size: 18px;
-  margin: 10px 0 5px;
-}
-
-.content p {
-  color: #777;
-}
-
-/* Định dạng slideshow */
-.slideshow {
-  width: 80%;
-  max-width: 800px;
-  margin: 20px auto;
-  display: block;
-  border-radius: 10px;
-}
-
-
-
-.menu-icon{
-  display: none;
-  font-size: 24px;
-  color: var(--hover-text-color);
-  cursor: pointer;
+/* Định dạng biểu tượng menu */
+.menu-icon {
+  display: none; /* Ẩn biểu tượng menu */
+  font-size: 24px; /* Thiết lập kích thước chữ của biểu tượng menu là 24px */
+  color: var(--hover-text-color); /* Thiết lập màu chữ của biểu tượng menu là màu từ biến --hover-text-color */
+  cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua biểu tượng menu */
 }
 
 /* Responsive */
 @media (max-width: 600px) {
   .navbar {
-    justify-content: flex-start; /* Căn logo và menu-icon về bên trái */
+      justify-content: flex-start; /* Căn logo và menu-icon về bên trái */
   }
 
   .menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0; /* Đổi vị trí sang trái */
-    background-color: var(--primary-color);
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none; /* Ẩn menu */
+      flex-direction: column-reverse; /* Thiết lập hướng của các mục trong danh sách theo chiều dọc */
+      position: absolute; /* Đặt vị trí của menu là tuyệt đối so với phần tử chứa */
+      top: 100%; /* Đặt menu phía dưới thanh điều hướng */
+      left: 0; /* Đổi vị trí của menu sang trái */
+      background-color: var(--primary-color); /* Màu nền của menu, sử dụng biến màu --primary-color */
+      width: 200px; /* Thiết lập chiều rộng của menu là 200px */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho menu với độ mờ 6px và màu đen nhạt */
   }
 
   .menu.show-menu {
-    display: flex;
+      display: flex; /* Hiển thị menu dưới dạng flexbox */
   }
 
   .menu li {
-    width: 100%;
+      width: 100%; /* Thiết lập chiều rộng của các mục trong danh sách là 100% */
   }
 
   .menu-icon {
-    display: block;
-    margin-right: 20px; /* Thêm khoảng cách giữa menu-icon và logo */
+      display: block; /* Hiển thị biểu tượng menu */
+      margin-right: 20px; /* Thêm khoảng cách 20px giữa menu-icon và logo */
+      order: -1; /* Đổi vị trí của menu-icon về bên trái */
   }
 
-  .menu-icon {
-    order: -1; /* Đổi vị trí của menu-icon về bên trái */
-  }
   .dropdown {
-    position: relative;
+      position: relative
   }
+}
 
-  .dropdown ul {
-    position: absolute;
-    left: 100% !important;
-    top: 0 !important;
-  }
+/* Định dạng slideshow */
+.slideshow {
+  width: 80%; /* Thiết lập chiều rộng của slideshow là 80% của phần tử chứa. */
+  max-width: 800px; /* Thiết lập chiều rộng tối đa của slideshow là 800px. */
+  margin: 20px auto; /* Thêm khoảng cách 20px trên và dưới của slideshow và canh giữa nó theo chiều ngang. */
+  display: block; /* Hiển thị slideshow dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa. */
+  border-radius: 10px; /* Làm tròn các góc của slideshow với bán kính 10px. */
+}
+
+/* --------------------------------------------------NGUYỄN ANH NHẬT---------------------------------------- */
+
+/* Định dạng danh sách nhân viên */
+.slide-contenner {
+  display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong .slide-contenner. */
+  justify-content: center; /* Canh giữa các phần tử con theo chiều ngang trong .slide-contenner. */
+  gap: 20px; /* Thêm khoảng cách 20px giữa các phần tử con trong .slide-contenner. */
+  flex-wrap: wrap; /* Cho phép các phần tử con bên trong .slide-contenner chuyển xuống dòng mới khi hết chỗ. */
+  margin: 20px 0; /* Thêm khoảng cách 20px trên và dưới của .slide-contenner. */
+}
+
+.slide {
+  width: 200px; /* Thiết lập chiều rộng của .slide là 200px. */
+  background-color: white; /* Thiết lập màu nền của .slide là màu trắng. */
+  padding: 15px; /* Thêm khoảng đệm bên trong .slide là 15px. */
+  border-radius: 10px; /* Làm tròn các góc của .slide với bán kính 10px. */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Tạo bóng đổ cho .slide với độ mờ 8px và màu đen nhạt. */
+  text-align: center; /* Canh giữa văn bản bên trong .slide theo chiều ngang. */
+  cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua .slide. */
+  border: #51ff00; /* Thiết lập viền của .slide là màu xanh lá cây nhạt (#51ff00). */
+}
+
+
+.hover-image {
+  width: 100%; /* Thiết lập chiều rộng của ảnh là 100%. */
+  height: 200px; /* Thiết lập chiều cao của ảnh là 200px. */
+  background-size: cover; /* Đảm bảo ảnh phủ kín khung hình. */
+  background-position: center; /* Canh giữa ảnh trong khung hình. */
+  border-radius: 10px; /* Làm tròn các góc của ảnh với bán kính 10px. */
+}
+
+.hover-image:hover {
+  transform: scale(1.5); /* Phóng to ảnh lên 1.5 lần khi rê chuột qua. */
+}
+
+.content h2 {
+  font-size: 18px; /* Thiết lập kích thước chữ của tiêu đề h2 là 18px. */
+  margin: 10px 0 5px; /* Thêm khoảng cách 10px trên và 5px dưới tiêu đề h2. */
+}
+
+
+.content p {
+  color: #777; /* Thiết lập màu chữ của đoạn văn (p) là màu xám nhạt (#777). */
+}
+
+/* --------------------------------------------------------LÔ THỊ THI------------------------------------------------------ */
+
+/* Định dạng thư viện sản phẩm */
+.gallery {
+  display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong thư viện sản phẩm. */
+  flex-wrap: wrap; /* Cho phép các phần tử con bên trong thư viện sản phẩm chuyển xuống dòng mới khi hết chỗ. */
+  justify-content: center; /* Canh giữa các phần tử con theo chiều ngang trong thư viện sản phẩm. */
+  gap: 15px; /* Thêm khoảng cách 15px giữa các phần tử con trong thư viện sản phẩm. */
+}
+
+
+.gallery img {
+  width: 200px; /* Thiết lập chiều rộng của ảnh trong thư viện là 200px. */
+  height: 150px; /* Thiết lập chiều cao của ảnh trong thư viện là 150px. */
+  border-radius: 5px; /* Làm tròn các góc của ảnh với bán kính 5px. */
+  object-fit: cover; /* Đảm bảo ảnh phủ kín khung hình và giữ tỉ lệ khung hình ban đầu. */
+  cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua ảnh. */
+  transition: transform 0.3s; /* Thêm hiệu ứng chuyển đổi khi thay đổi kích thước ảnh. */
+  background-color: #ddd; /* Thiết lập màu nền của ảnh là màu xám nhạt (#ddd). */
+  padding: auto; /* Thiết lập khoảng đệm của ảnh là auto (mặc dù thuộc tính này không ảnh hưởng đến ảnh). */
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* Phóng to ảnh lên 1.1 lần khi rê chuột qua. */
+}
+
+/* Định dạng Lightbox */
+.lightbox {
+  display: none; /* Ẩn lightbox. */
+  position: fixed; /* Đặt vị trí của lightbox là cố định so với cửa sổ trình duyệt. */
+  top: 0; /* Đặt lightbox ở đầu trang. */
+  left: 0; /* Đặt lightbox ở bên trái trang. */
+  width: 100%; /* Thiết lập chiều rộng của lightbox là 100%. */
+  height: 100%; /* Thiết lập chiều cao của lightbox là 100%. */
+  background: rgba(0, 0, 0, 0.8); /* Thiết lập màu nền của lightbox là màu đen với độ mờ 80%. */
+  align-items: center; /* Canh giữa các phần tử con theo chiều dọc trong lightbox. */
+  justify-content: center; /* Canh giữa các phần tử con theo chiều ngang trong lightbox. */
+}
+
+
+.lightbox img {
+  max-width: 90%; /* Thiết lập chiều rộng tối đa của ảnh trong lightbox là 90%. */
+  max-height: 90%; /* Thiết lập chiều cao tối đa của ảnh trong lightbox là 90%. */
+}
+/* Định dạng slideshow */
+.slideshow {
+  width: 80%; /* Thiết lập chiều rộng của slideshow là 80% của phần tử chứa. */
+  max-width: 800px; /* Thiết lập chiều rộng tối đa của slideshow là 800px. */
+  margin: 20px auto; /* Thêm khoảng cách 20px trên và dưới của slideshow và canh giữa nó theo chiều ngang. */
+  display: block; /* Hiển thị slideshow dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa. */
+  border-radius: 10px; /* Làm tròn các góc của slideshow với bán kính 10px. */
+}
+
+
+/* Định dạng ảnh hover */
+.hover-image {
+  width: 100%; /* Thiết lập chiều rộng của ảnh là 100%. */
+  height: 200px; /* Thiết lập chiều cao của ảnh là 200px. */
+  background-size: cover; /* Đảm bảo ảnh phủ kín khung hình. */
+  background-position: center; /* Canh giữa ảnh trong khung hình. */
+  border-radius: 10px; /* Làm tròn các góc của ảnh với bán kính 10px. */
 }
 
