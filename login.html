@@ -1,20 +1,29 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Đăng Nhập/Đăng Ký</title>
+  <title>Đăng nhập / Đăng ký</title>
 <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <div class="container" id="form-container">
-        <button id="closeBtn">X</button>
-        <h2>Đăng nhập</h2>
-        <input type="text" id="login-username" placeholder="Tên người dùng hoặc email">
-        <input type="password" id="login-password" placeholder="Mật khẩu">
-        <button onclick="login()">Đăng nhập</button>
-        <a href="javascript:showSignup()">Chưa có tài khoản? Đăng ký</a>
-    </div>
-    <script src="login.js"></script>
+    <div id="form-container">
+    <button id="closeBtn">X</button>
+</div>
+    <form id="authForm">
+        <label for="username">Tên đăng nhập:</label><br>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Mật khẩu:</label><br>
+        <input type="password" id="password" name="password">
+        <span id="togglePassword" style="cursor: pointer;">&#128065;</span><br><br>
+        <div id="confirmPasswordDiv" style="display: none;">
+          <label for="confirmPassword">Xác nhận mật khẩu:</label><br>
+          <input type="password" id="confirmPassword" name="confirmPassword">
+          <span id="toggleConfirmPassword" style="cursor: pointer;">&#128065;</span><br><br>
+        </div>
+        <button type="submit" id="loginButton">Đăng nhập</button>
+        <button type="button" id="registerButton">Đăng ký</button>
+      </form>
+  <script src="login.js"></script>
 </body>
 </html>
+        
+ 

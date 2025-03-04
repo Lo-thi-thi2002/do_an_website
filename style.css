@@ -19,7 +19,7 @@ body {
 /* Định dạng phần header */
 header {
   background-color: var(--secondary-color); /* Màu nền trắng cho header, sử dụng biến màu --secondary-color. */
-  padding: 20px; /* Thêm khoảng đệm bên trong header là 20px. */
+  padding: 70px; /* Thêm khoảng đệm bên trong header là 20px. */
   display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong header. */
 }
 
@@ -230,23 +230,33 @@ header img {
 }
 
 /* Định dạng Lightbox */
+/* Định dạng Lightbox */
 .lightbox {
-  display: none; /* Ẩn lightbox. */
-  position: fixed; /* Đặt vị trí của lightbox là cố định so với cửa sổ trình duyệt. */
-  top: 0; /* Đặt lightbox ở đầu trang. */
-  left: 0; /* Đặt lightbox ở bên trái trang. */
-  width: 100%; /* Thiết lập chiều rộng của lightbox là 100%. */
-  height: 100%; /* Thiết lập chiều cao của lightbox là 100%. */
-  background: rgba(0, 0, 0, 0.8); /* Thiết lập màu nền của lightbox là màu đen với độ mờ 80%. */
-  align-items: center; /* Canh giữa các phần tử con theo chiều dọc trong lightbox. */
-  justify-content: center; /* Canh giữa các phần tử con theo chiều ngang trong lightbox. */
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  align-items: center;
+  justify-content: center;
 }
-
 
 .lightbox img {
-  max-width: 90%; /* Thiết lập chiều rộng tối đa của ảnh trong lightbox là 90%. */
-  max-height: 90%; /* Thiết lập chiều cao tối đa của ảnh trong lightbox là 90%. */
+  max-width: 90%;
+  max-height: 90%;
 }
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: rgb(17, 17, 17);
+  cursor: pointer;
+}
+
 /* Định dạng slideshow */
 .slideshow {
   width: 80%; /* Thiết lập chiều rộng của slideshow là 80% của phần tử chứa. */
@@ -255,7 +265,6 @@ header img {
   display: block; /* Hiển thị slideshow dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa. */
   border-radius: 10px; /* Làm tròn các góc của slideshow với bán kính 10px. */
 }
-
 
 /* Định dạng ảnh hover */
 .hover-image {
@@ -273,4 +282,12 @@ button{
 }
 button:hover{
   color: var(--hover-text-color);
+}
+#message, #welcomeMessage{
+  font-size: 30px;
+  font-weight: bold;
+}
+#loginButton,#registerButton,#logoutButton{
+  border: none;
+  background-color: var(--hover-bg-color);
 }

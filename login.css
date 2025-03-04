@@ -1,73 +1,89 @@
 body {
-  font-family: Arial, sans-serif; /* Thiết lập kiểu chữ mặc định là Arial. Nếu Arial không có sẵn, sử dụng kiểu chữ sans-serif. */
-  display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong body. */
-  justify-content: center; /* Canh giữa theo chiều ngang các phần tử con trong body. */
-  align-items: center; /* Canh giữa theo chiều dọc các phần tử con trong body. */
-  height: 100vh; /* Thiết lập chiều cao của body là 100% chiều cao của khung nhìn (viewport height). */
-  background-color: #f6f8fa; /* Thiết lập màu nền của body là màu xám nhạt (#f6f8fa). */
-  margin: 0; /* Loại bỏ lề mặc định của body. */
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f4f4f4;
 }
 
-.container {
-  background-color: white; /* Thiết lập màu nền của .container là màu trắng. */
-  padding: 20px; /* Thêm khoảng đệm bên trong .container là 20px. */
-  border-radius: 5px; /* Làm tròn các góc của .container với bán kính 5px. */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Tạo bóng đổ cho .container với độ mờ 10px và màu đen nhạt. */
-  text-align: center; /* Canh giữa văn bản bên trong .container. */
-  width: 300px; /* Thiết lập chiều rộng của .container là 300px. */
+#authForm {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
 }
 
-.container h2 {
-  margin-bottom: 20px; /* Thêm khoảng cách 20px dưới tiêu đề h2 trong .container. */
-}
-.container input[type="text"],/* nhập dữ liệu kiểu chữ */
-.container input[type="password"],/* nhập dữ liệu kiểu mật khẩu*/
-.container input[type="email"] { /* nhập dữ liệu kiểu email*/
-  width: 100%; /* Thiết lập chiều rộng của các ô nhập liệu là 100%. */
-  padding: 10px; /* Thêm khoảng đệm bên trong các ô nhập liệu là 10px. */
-  margin: 10px 0; /* Thêm khoảng cách 10px trên và dưới các ô nhập liệu. */
-  border: 1px solid #ddd; /* Thiết lập viền của các ô nhập liệu là 1px và màu xám nhạt (#ddd). */
-  border-radius: 5px; /* Làm tròn các góc của các ô nhập liệu với bán kính 5px. */
+#authForm h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
 }
 
-.container button {
-  width: 100%; /* Thiết lập chiều rộng của nút là 100%. */
-  padding: 10px; /* Thêm khoảng đệm bên trong nút là 10px. */
-  background-color: #28a745; /* Thiết lập màu nền của nút là màu xanh lá cây (#28a745). */
-  border: none; /* Loại bỏ viền của nút. */
-  border-radius: 5px; /* Làm tròn các góc của nút với bán kính 5px. */
-  color: white; /* Thiết lập màu chữ của nút là màu trắng. */
-  font-size: 16px; /* Thiết lập kích thước chữ của nút là 16px. */
-  cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua nút. */
+#authForm label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
 }
 
-.container button:hover {
-  background-color: #218838; /* Thay đổi màu nền của nút khi di chuột qua nút sang màu xanh lá cây đậm hơn (#218838). */
+#authForm input[type="text"],
+#authForm input[type="password"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.container a {
-  display: block; /* Hiển thị phần tử liên kết (a) dưới dạng khối (block). */
-  margin-top: 10px; /* Thêm khoảng cách 10px phía trên phần tử liên kết. */
-  color: #0366d6; /* Thiết lập màu chữ của phần tử liên kết là màu xanh dương (#0366d6). */
-  text-decoration: none; /* Loại bỏ gạch chân mặc định của phần tử liên kết. */
+#authForm button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  margin-bottom: 10px;
 }
 
-.container a:hover {
-  text-decoration: underline; /* Thêm gạch chân cho phần tử liên kết khi di chuột qua. */
+#authForm button:hover {
+  background-color: #0056b3;
 }
 
+#togglePassword {
+  position: relative;
+  top: 2px;
+  right: 30px;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+#toggleConfirmPassword{
+  position: relative;
+  top: 2px;
+  right: 30px;
+  float: right;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 #closeBtn {
-  position: absolute; /* Đặt nút ở vị trí tuyệt đối so với phần tử chứa nó. */
-  top: 60px; /* Đặt nút cách phía trên 60px. */
-  right: 290px; /* Đặt nút cách phía phải 290px. */
+ position: absolute; /* Đặt nút ở vị trí tuyệt đối so với phần tử chứa nó. */
+  top: 30px; /* Đặt nút cách phía trên 60px. */
+  right: 300px; /* Đặt nút cách phía phải 290px. */
   background-color: #ffffff; /* Thiết lập màu nền của nút là màu trắng (mặc dù chú thích đề cập là màu đỏ). */
   color: black; /* Thiết lập màu chữ của nút là màu đen. */
   border: none; /* Loại bỏ viền của nút. */
-  border-radius: 50%; /* Làm tròn các góc của nút với bán kính 50%, biến nút thành hình tròn. */
-  width: 30px; /* Thiết lập chiều rộng của nút là 30px. */
+  border-radius: 100%; /* Làm tròn các góc của nút với bán kính 50%, biến nút thành hình tròn. */
+  width: 5px; /* Thiết lập chiều rộng của nút là 30px. */
   height: 30px; /* Thiết lập chiều cao của nút là 30px. */
-  cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua nút. */
-  font-size: 16px; /* Thiết lập kích thước chữ của nút là 16px. */
+ cursor: pointer; /* Thiết lập con trỏ chuột thành hình bàn tay khi di chuột qua nút. */
+  font-size: 20px; /* Thiết lập kích thước chữ của nút là 16px. */
   text-align: center; /* Canh giữa văn bản bên trong nút theo chiều ngang. */
-  line-height: 30px; /* Thiết lập chiều cao dòng của văn bản bên trong nút là 30px để canh giữa theo chiều dọc. */
 }

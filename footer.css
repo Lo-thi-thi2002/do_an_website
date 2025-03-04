@@ -15,8 +15,8 @@ html, body {
 }
 
 #footer {
-  background-color: #333; /* Thiết lập màu nền của #footer là màu xám đậm (#333). */
-  color: white; /* Thiết lập màu chữ của #footer là màu trắng. */
+  background-color: #b4f7fc; /* Thiết lập màu nền của #footer là màu xám đậm (#333). */
+  color: rgb(108, 127, 238); /* Thiết lập màu chữ của #footer là màu trắng. */
   padding: 20px; /* Thêm khoảng đệm bên trong #footer là 20px. */
   font-family: Arial, sans-serif; /* Thiết lập kiểu chữ của #footer là Arial, nếu không có sẵn sẽ sử dụng sans-serif. */
   display: flex; /* Sử dụng mô hình hộp linh hoạt (flexbox) để bố trí các phần tử con bên trong #footer. */

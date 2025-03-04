@@ -10,10 +10,8 @@
     <!-- ------------------------------TRẦN PHẠM MINH KHOA---------------------------------------- -->
     <header>
 
-        <div id="welcomeMessage" style="display:none;">
-            <h1>Xin chào <span id="user"></span>!</h1>
-            <h3>Chào mừng đến với công ty của chúng tôi</h3>
-        </div>
+        <div id="message"></div>
+        <div id="welcomeMessage" style="display: none;"></div>
         <img src="hinh_anh/logo 400.jpg" alt="logo">
     </header>
 
@@ -48,8 +46,9 @@
             
             <!-- -----------------------------------------DƯƠNG TRỌNG NGHĨA--------------------------------- -->
             </li>
-            <li><a href="login.html">Đăng nhập</a></li>
-            <button id="logoutButton">Đăng xuất</button>
+            <button id="loginButton">Đăng nhập/</button>
+            <button id="registerButton">Đăng ký</button>
+            <button id="logoutButton" style="display: none;">Đăng xuất</button>
         </ul>
         <!-- KHOA LÀM RESPONSIVE -->
         
@@ -62,12 +61,48 @@
 <h2 id="category-title">Chọn danh mục để xem thư viện sản phẩm</h2>
 <div class="gallery" id="product-gallery">
     <!-- Thư viện sản phẩm sẽ hiển thị ở đây -->
-      <!-- Lightbox hiển thị ảnh lớn -->
-    <div id="lightbox" class="lightbox">
-        <a href="#" class="close">&times;</a>
-        <img id="lightbox-img" src="">
-    </div>
-</div>
+    <img id="slideshow" class="slideshow" src="hinh_anh/about/about_10.jpg" alt="Hình ảnh">
+    <div class="slide-contenner">
+        <div class="slide" onclick="showProducts('giày bé gái')">
+            <div class="hover-image" style="background-image: url('hinh_anh/giay_be_gai/giaybegai_17.jpg');">
+              
+            </div>
+            <div class="content">
+                <h2>GIÀY THỂ THAO BÉ GÁI</h2>
+                <p>250.000đ</p>
+            </div>
+        </div>
+        <div class="slide"onclick="showProducts('giày bé trai')">
+            <div class="hover-image" style="background-image: url('hinh_anh/giay_be_trai/giaybetrai_14.jpg');">
+            </div>
+            <div class="content">
+                <h2>GIÀY THỂ THAO BÉ TRAI</h2>
+                <p>400.000đ</p>
+            </div>
+        </div>
+        <div class="slide" onclick="showProducts('giày bé gái')">
+            <div class="hover-image" style="background-image: url('hinh_anh/giay_nam/giaynam_2.jpg');">
+            </div>
+            <div class="content">
+                <h2>GIÀY THỂ THAO NAM</h2>
+                <p>250.000đ</p>
+            </div>
+        </div>
+        <div class="slide" onclick="showProducts('giày bé gái')">
+            <div class="hover-image" style="background-image: url('hinh_anh/giay_nu/giaynu_18.jpg');">
+            </div>
+            <div class="content">
+                <h2>GIÀY CAO GÓT NỮ</h2>
+                        <p>500.000đ</p>
+            </div>
+        </div>
+        </div>
+        <!-- Lightbox hiển thị ảnh lớn -->
+        <div id="lightbox" class="lightbox">
+            <a href="#" class="close">&times;</a>
+            <img id="lightbox-img" src="">
+        </div>
+
     <!-- ----------------------------------------------NGUYỄN ANH NHẬT----------------------------------------- -->
 
 <h2>DANH SÁCH NHÂN VIÊN CÔNG TY</h2>
@@ -108,7 +143,6 @@
     </div>
     
     <!-- ------------------------------TRẦN PHẠM MINH KHOA--------------------------------------- -->
-    <img id="slideshow" class="slideshow" src="hinh_anh/about/about_10.jpg" alt="Hình ảnh">
     <footer id="footer-container"></footer>
     <script>
         fetch("footer.html")

@@ -97,7 +97,7 @@
                 { name: "1. Giày Thỏ Trắng", price: "350,000đ", image: "hinh_anh/giay_be_gai/giaybegai_1.jpg" },
                 { name: "2. Giày Sandal Bé Gái Trắng", price: "400,000đ", image: "hinh_anh/giay_be_gai/giaybegai_2.jpg" },
                 { name: "3. Giày 2 con mèo", price: "400,000đ", image: "hinh_anh/giay_be_gai/giaybegai_3.jpg" },
-                { name: "4. Giày Sandal Bé Gái", price: "280,000đ", image: "hinh_anh/giay_be_gai/giaybegai_.jpg" },
+                { name: "4. Giày Sandal Bé Gái", price: "280,000đ", image: "hinh_anh/giay_be_gai/giaybegai_4.jpg" },
                 { name: "5. Giày Công Chúa Đính Vàng", price: "850,000đ", image: "hinh_anh/giay_be_gai/giaybegai_5.jpg" },
                 { name: "6. Giày Sandal Bé Gái Thắt Cổ Chân", price: "300,000đ", image: "hinh_anh/giay_be_gai/giaybegai_6.jpg" },
                 { name: "7. Giày Công Chúa Thắt Nơ Trắng", price: "450,000đ", image: "hinh_anh/giay_be_gai/giaybegai_7.jpg" },
@@ -141,18 +141,18 @@
             }
         }
 
-        // Hiển thị ảnh lớn khi click vào sản phẩm
-        function showLightbox(imageSrc) {
-            document.getElementById("lightbox-img").src = imageSrc;
-            document.getElementById("lightbox").style.display = "flex";
-        }
+    // Hiển thị ảnh lớn khi click vào sản phẩm
+    function showLightbox(imageSrc) {
+        document.getElementById("lightbox-img").src = imageSrc;
+        document.getElementById("lightbox").style.display = "flex";
+    }
 
-        // Đóng lightbox khi click ra ngoài
-        document.getElementById("lightbox").addEventListener("click", function (e) {
-            if (e.target === this) {
-                this.style.display = "none";
-            }
-        });
+    // Đóng lightbox khi click ra ngoài
+    document.getElementById("lightbox").addEventListener("click", function (e) {
+        if (e.target === this) {
+            this.style.display = "none";
+        }
+    });
         // trần phạm minh khoa
         // responsive
         document.querySelector('.menu-icon').addEventListener('click', function() {
@@ -177,20 +177,55 @@
           }
   
           setInterval(changeImage, 3000); // Thay đổi ảnh mỗi 3 giây
-           // Lấy tên người dùng từ localStorage
-        //    hiện thị xin chào ở đầu trang
-        const username = localStorage.getItem("username");
-        // Nếu tên người dùng tồn tại, hiển thị thông điệp chào mừng
-        if (username) {
-            document.getElementById("user").innerText = username;
-            document.getElementById("welcomeMessage").style.display = "block";
+    //   đăng nhập đăng xuất
+    document.addEventListener('DOMContentLoaded', function() {
+        const messageDiv = document.getElementById('message');
+        const welcomeMessageDiv = document.getElementById('welcomeMessage');
+        const loginButton = document.getElementById('loginButton');
+        const registerButton = document.getElementById('registerButton');
+        const logoutButton = document.getElementById('logoutButton');
+      
+        // Kiểm tra trạng thái đăng nhập và tên người dùng từ localStorage
+        const isLoggedIn = localStorage.getItem('isLoggedIn');
+        const username = localStorage.getItem('username');
+      
+        if (isLoggedIn) {
+          // Nếu đã đăng nhập, hiển thị thông báo chào mừng và nút đăng xuất
+          messageDiv.style.display = 'none';
+          welcomeMessageDiv.textContent = `Xin chào bạn ${username}! Chào mừng bạn đến với công ty của chúng tôi`;
+          welcomeMessageDiv.style.display = 'block';
+          loginButton.style.display = 'none';
+          registerButton.style.display = 'none';
+          logoutButton.style.display = 'block';
+        } else {
+          // Nếu chưa đăng nhập, hiển thị thông báo và nút đăng nhập/đăng ký
+          messageDiv.textContent = 'Xin chào, vui lòng đăng nhập hoặc đăng ký.';
+          messageDiv.style.display = 'block';
+          welcomeMessageDiv.style.display = 'none';
+          loginButton.style.display = 'block';
+          registerButton.style.display = 'block';
+          logoutButton.style.display = 'none';
         }
-        // -----------------------------------------------DƯƠNG TRỌNG NGHĨA-----------------------------------
-        // ĐĂNG XUẤT
-        document.getElementById('logoutButton').addEventListener('click', function() {
-            // Xóa thông tin xác thực của người dùng (ví dụ: token đăng nhập, cookie)
-            localStorage.removeItem('authToken'); // Ví dụ: nếu bạn lưu token trong localStorage
-            // Chuyển hướng người dùng đến trang đăng nhập hoặc trang chủ
-            window.location.href = 'login.html'; // Điều chỉnh URL theo trang bạn muốn điều hướng đến
+      
+        // Xử lý sự kiện khi nhấn nút đăng nhập
+        loginButton.addEventListener('click', function() {
+          window.location.href = 'login.html';
         });
-        
+      
+        // Xử lý sự kiện khi nhấn nút đăng ký
+        registerButton.addEventListener('click', function() {
+          window.location.href = 'login.html';
+        });
+      
+        // Xử lý sự kiện khi nhấn nút đăng xuất
+        logoutButton.addEventListener('click', function() {
+          localStorage.removeItem('isLoggedIn');
+          localStorage.removeItem('username'); // Xóa tên người dùng
+          messageDiv.textContent = 'Xin chào, vui lòng đăng nhập hoặc đăng ký.';
+          messageDiv.style.display = 'block';
+          welcomeMessageDiv.style.display = 'none';
+          loginButton.style.display = 'block';
+          registerButton.style.display = 'block';
+          logoutButton.style.display = 'none';
+        });
+      });
