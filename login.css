@@ -73,7 +73,8 @@ body {
   -ms-user-select: none;
   user-select: none;
 }
-#closeBtn {
+#form-container #closeBtn {
+  display: inline-block;
  position: absolute; /* Đặt nút ở vị trí tuyệt đối so với phần tử chứa nó. */
   top: 30px; /* Đặt nút cách phía trên 60px. */
   right: 300px; /* Đặt nút cách phía phải 290px. */
