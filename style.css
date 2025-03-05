@@ -259,8 +259,8 @@ header img {
 
 /* Định dạng slideshow */
 .slideshow {
-  width: 80%; /* Thiết lập chiều rộng của slideshow là 80% của phần tử chứa. */
-  max-width: 800px; /* Thiết lập chiều rộng tối đa của slideshow là 800px. */
+  width: 100%; /* Thiết lập chiều rộng của slideshow là 100% của phần tử chứa. */
+  max-width: 1000px; /* Thiết lập chiều rộng tối đa của slideshow là 800px. */
   margin: 20px auto; /* Thêm khoảng cách 20px trên và dưới của slideshow và canh giữa nó theo chiều ngang. */
   display: block; /* Hiển thị slideshow dưới dạng khối (block) để nó chiếm toàn bộ chiều rộng của phần tử chứa. */
   border-radius: 10px; /* Làm tròn các góc của slideshow với bán kính 10px. */
